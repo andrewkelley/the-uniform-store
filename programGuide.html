@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Multi-page template</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>	
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<img src="images/bsr.jpg" style="float:left;display:inline" width="100%" />
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		
+		<div data-role="fieldcontain" data-theme="a">
+			<select name="select-choice-1" id="select-choice-1" data-theme="a">
+				<option value="standard">Monday</option>
+				<option value="rush">Tuesday</option>
+				<option value="express">Wednesday</option>
+				<option value="overnight">Thursday</option>
+				<option value="overnight">Friday</option>
+				<option value="overnight">Saturday</option>
+				<option value="overnight">Sunday</option>
+			</select>
+		</div>
+	
+		<br />
+		
+		<ul data-role="listview" data-theme="a" data-split-theme="d">
+			<li>RADIO SHOW<p class="ui-li-aside">10AM-12PM</p></li>
+			<li>WE PLAY MUSIC<p class="ui-li-aside">12PM-2PM</p></li>
+			<li>MOONTIME RADIO<p class="ui-li-aside">2PM-4PM</p></li>
+			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">4PM-6PM</p></li>
+			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">6PM-8PM</p></li>
+			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">8PM-10PM</p></li>
+			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">10PM-12AM</p></li>
+			<li>COLLEGE RRRAADDDIIIOO<p class="ui-li-aside">12AM-2AM</p></li>
+		</ul>	
+	
+	
+	</div><!-- /content -->
+
+</div><!-- /page -->
+</body>
+</html>
