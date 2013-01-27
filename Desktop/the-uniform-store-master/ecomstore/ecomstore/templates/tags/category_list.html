@@ -1,0 +1,4 @@
+<li style="font-size: 16px;" class="nav-header">Categories</li>
+{% for c in active_categories %}
+    <li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>
+{% endfor %}

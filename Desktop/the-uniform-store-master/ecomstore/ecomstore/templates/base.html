@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %} {{ site_name }} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="{{ meta_keywords }}" />
+    <meta name="description" content="{{ meta_description }}" />
+
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/fancybox.css" rel="stylesheet">
+    
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts Open Sans Normal 400 */
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="static/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="static/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <!-- <a class="brand" href="#">Project name</a> -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Store</a></li>
+              <li class="dropdown">
+                <a href="/info/" class="dropdown-toggle" data-toggle="dropdown">Customization <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/info/">Decoration</a></li>
+                  <li><a href="/info/">Artwork</a></li>
+                  <li><a href="/info/">Digitizing</a></li>
+                </ul>
+              </li>
+              <li><a href="/scopes_for_the_cure/">Scopes for the Cure</a></li>
+			  <li><a href="/info/">Contact Us</a></li>
+            </ul>
+            <ul class="nav pull-right">
+            <li><a href="/">Sign in</a></li>
+          </ul>
+          </div><!--/.nav-collapse -->
+              <!-- <input class="span2" type="text" placeholder="Email"> -->
+              <!-- <input class="span2" type="password" placeholder="Password"> -->
+        </div>
+      </div>
+    </div>
+
+	{% block content %} {% endblock %}
+
+      <footer>
+		<div class="row">                   
+			<div class="span3">
+				<div class="company_info">
+					<h4 class="logo-title"><span>The Uniform Store</span></h4>
+					<p>
+						6641 Dublin Center Dr<br>
+						Dublin, OH  43017<br>
+						614.793.0469
+					</p>
+				</div>
+			</div>
+			 <div class="span3">   
+				<h4>Information</h4>
+					<a href="about.html">About Us</a><br>
+					<a href="#">Delivery Information</a><br>
+					<a href="#">Privacy Policy</a><br>
+					<a href="#">Terms &amp; Conditions</a><br>
+			</div>
+			<div class="span3">
+				<h4>My Account</h4>
+					<a href="#">My Account</a><br>
+					<a href="#">Order History</a><br>
+					<a href="#">Wish List</a><br>
+			</div>
+			<div class="span3">
+				<h4 class="logo-title">Connect with us</h4>
+				<a href="#"><img style="max-height: 14px;" src="/static/img/glyphicons/facebook.png" /> Facebook</a>
+				<br>
+                <a href="#"><img style="max-height: 14px;" src="/static/img/glyphicons/twitter.png"/> Twitter</a>
+			</div>				
+		</div>
+      </footer>
+      
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/fancybox.js"></script>
+    <script src="/static/js/jquery.masonry.min.js"></script>
+    <script src="/static/js/holder.js"></script>    
+    <script>
+    	var $container = $('.thumbnails');
+    	
+		$container.imagesLoaded( function(){
+  			$container.masonry({
+   				itemSelector : '.masonry-brick'
+ 			});
+		});
+		
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				openEffect	: 'elastic',
+    			closeEffect	: 'elastic',
+
+    			helpers : {
+    				title : {
+    				type : 'inside'
+    				}
+    			}
+			});
+		});
+    </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=321776797915660";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <!--<script src="static/js/bootstrap-transition.js"></script>
+    <script src="static/js/bootstrap-alert.js"></script>
+    <script src="static/js/bootstrap-modal.js"></script>
+    <script src="static/js/bootstrap-dropdown.js"></script>
+    <script src="static/js/bootstrap-scrollspy.js"></script>
+    <script src="static/js/bootstrap-tab.js"></script>
+    <script src="static/js/bootstrap-tooltip.js"></script>
+    <script src="static/js/bootstrap-popover.js"></script>
+    <script src="static/js/bootstrap-button.js"></script>
+    <script src="static/js/bootstrap-collapse.js"></script>
+    <script src="static/js/bootstrap-carousel.js"></script>
+    <script src="static/js/bootstrap-typeahead.js"></script>-->
+
+  </body>
+</html>
