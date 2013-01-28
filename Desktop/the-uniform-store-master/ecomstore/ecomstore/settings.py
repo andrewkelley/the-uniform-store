@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'preview',
     'accounts',
     'utils',
+    'cart',
 )
 
 # A sample logging configuration. The only tangible logging

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% load catalog_filters %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<h2 class="title">Your Cart</h2>
+			<hr>
+			<div class="entry">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>Remove</th>
+							<th>Image</th>
+							<th>Product Name</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% if cart_items %}
+						{% for item in cart_items %}
+						<tr>
+							<td class="center">
+								<input type="checkbox" value="option1"
+							</td>
+							<td class="center">
+								<a href="">
+									<img src="">
+								</a>
+							</td>
+							<td>
+								{{ item.name }}
+							</td>
+							<td>
+								<input type="text" placeholder="1" class="input-mini" value="{{ item.quantity }}">
+							</td>
+							<td> {{ item.price|currency }}</td>
+							<td>Total price
+								<input type="hidden" name="item_id" value="{{ item.id }}" />
+							</td>
+						</tr>
+						{% endfor %}
+						{% else %}
+						<div class="alert alert-error">
+							Your Cart is Empty.
+						</div>
+						{% endif %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span5">
+			<button class="btn btn-primary" type="submit">Update</button>
+		</div>
+		<div class="span2">
+			<button class="btn btn-primary" type="submit">Continue</button>
+		</div>
+		<div class="span5">
+			<button class="btn btn-primary pull-right" type="submit">Checkout</button>
+		</div>
+	</div>
+<hr>
+{% endblock %}
+
+
