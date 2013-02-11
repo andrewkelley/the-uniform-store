@@ -3,54 +3,59 @@
 {% block content %}
 
     <div class="container">
-      <div class="row">
-        <div class="span3">
-            <ul class="nav nav-list">
-              {% include "tags/category_list.html" %}
-            </ul>
-        </div><!--/span-->
-        <div class="span9">
-        	<div class="row">
-        		<div class="span9">
-        			<h2 class="title">{{ p.name }}</h2>
-        			<hr>
-        		</div>
-        		
-        	</div>
-        	<div class="row">
-        		<div class="span4">
-        			<a href="{{ STATIC_URL }}img/liberty_small.jpg" class="thumbnail fancybox" >
-        				<img src="{{ STATIC_URL }}img/liberty_small.jpg">
-        			</a>
-        		</div>
-        		<div class="span5">
-        			<address>
-        				<strong>Brand: </strong>
-        				<span>{{ p.brand }}</strong>
-        				<br>
-        				<strong>Description: </strong><br>
-        				<span>{{ p.description }}</strong>
-        				<br>
-        			</address>
-        			<h3>Price: {{ p.price }} </h3>
-        		</div>
-        		<div class="span5">
-        			<form method="post" action="." class="form-inline addtocart">
-        				<label>Quantity:</label>
-        				<input type="text" class="span2" placeholder="1">
-        				<button class="btn" type="submit">Add to Cart</button>
-        			</form>
-        		</div>
-        		<div class="span5">
-        			<ul class="socialmedia">
-        				<li><a href="https://twitter.com/share" class="twitter-share-button" data-related="theuniformstore" data-hashtags="uniformstore">Tweet</a></li>
-        				<li><div class="fb-like" data-href="http://www.theuniformstore.net" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="segoe ui"></div></li>
-        			</ul>
-        		</div>
-        	</div>
-        </div><!--/span-->
-      </div><!--/row-->
-
-      <hr>
+		
+		  <div class="row">
+			<div class="span3">
+				<ul class="nav nav-list">
+				  {% include "tags/category_list.html" %}
+				</ul>
+			</div><!--/span-->
+			<div class="span9">
+				<div class="row">
+					<div class="span9">
+						<h2 class="title">{{ p.name }}</h2>
+						<hr>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="span4">
+						<a href="{{ STATIC_URL }}img/liberty_small.jpg" class="thumbnail fancybox" >
+							<img src="{{ STATIC_URL }}img/liberty_small.jpg">
+						</a>
+					</div>
+					<div class="span5">
+						<address>
+							<strong>Brand: </strong>
+							<span>{{ p.brand }}</strong>
+							<br>
+							<strong>Description: </strong><br>
+							<span>{{ p.description }}</strong>
+							<br>
+						</address>
+						<h3>Price: {{ p.price }} </h3>
+					</div>
+					<div class="span5">
+						<form action="" method="post" class="form-inline cart">
+							{% csrf_token %}
+							<!-- {{ form.as_p }} -->
+							<!-- <input type="submit" value="Add To Cart" name="submit" alt="Add To Cart" /> -->
+							<label>Quantity:</label>
+							{{ form.quantity }}
+							<input type="submit" value="Add to Cart" class="btn btn-primary" name="submit" />
+							{{ form.product_slug }}
+						</form>
+					</div>
+					<div class="span5">
+						<ul class="socialmedia">
+							<li><a href="https://twitter.com/share" class="twitter-share-button" data-related="theuniformstore" data-hashtags="uniformstore">Tweet</a></li>
+							<li><div class="fb-like" data-href="http://www.theuniformstore.net" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="segoe ui"></div></li>
+						</ul>
+					</div>
+				</div>
+			</div><!--/span-->
+		  
+	</div>
+    <hr>
 
 {% endblock %}

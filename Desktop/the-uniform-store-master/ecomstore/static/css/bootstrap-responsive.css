@@ -446,6 +446,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+  .navbar {
+  	margin-top: 10px;
+  }
   .row {
     margin-left: -20px;
     *zoom: 1;
@@ -471,7 +474,8 @@
     width: 724px;
   }
   .span12 {
-    width: 724px;
+    /* width: 724px; */
+    width: 94%;
   }
   .span11 {
     width: 662px;
@@ -787,6 +791,9 @@
 }
 
 @media (max-width: 767px) {
+  .navbar {
+  	margin-top:10px;
+  }
   body {
     padding-right: 20px;
     padding-left: 20px;
@@ -828,7 +835,7 @@
   .row-fluid [class*="span"] {
     display: block;
     float: none;
-    width: 100%;
+    width: 94%;
     margin-left: 0;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -836,7 +843,7 @@
   }
   .span12,
   .row-fluid .span12 {
-    width: 100%;
+    width: 94%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;

@@ -7,6 +7,12 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+ENABLE_SSL = False
+
+# Stripe keys
+STRIPE_PUBLISHABLE = 'pk_test_jxxwWSFsUkW8oVBcTHxeGV9b'
+STRIPE_SECRET = 'sk_test_cFa3TOs21iCFrGQUt1MZI3ju'
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -98,8 +104,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'utils.SSLMiddleware.SSLRedirect'
 )
 
 ROOT_URLCONF = 'ecomstore.urls'

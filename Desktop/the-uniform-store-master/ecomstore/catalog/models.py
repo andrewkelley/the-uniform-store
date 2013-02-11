@@ -20,9 +20,9 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
-@models.permalink
-def get_absolute_url(self):
-    return ('catalog_category', (), { 'category_slug': self.slug })
+    @models.permalink
+    def get_absolute_url(self):
+        return ('catalog_category', (), { 'category_slug': self.slug })
 
 
 
@@ -52,15 +52,15 @@ class Product(models.Model):
     def __unicode__(self):
         return self.name
 
-@models.permalink
-def get_absolute_url(self):
-    return('catalog product', (), {'product_slug': self.slug })
+    @models.permalink
+    def get_absolute_url(self):
+        return('catalog_product', (), {'product_slug': self.slug })
 
-def sale_price(self):
-    if self.old_price > self.price:
-        return self.price
-    else:
-        return None
+    def sale_price(self):
+        if self.old_price > self.price:
+            return self.price
+        else:
+            return None
 
 
 

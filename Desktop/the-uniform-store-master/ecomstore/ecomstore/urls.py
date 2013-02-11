@@ -10,11 +10,7 @@ urlpatterns = patterns('',
     url(r'^info/', 'preview.views.info'),    
     url(r'^', include('catalog.urls')),
     url(r'^cart/', include('cart.urls')),
-    url(r'^scopes_for_the_cure/', 'preview.views.scopes_for_the_cure'),
-    url(r'^james_cancer_hospital/', 'preview.views.james_cancer_hospital'),
-    url(r'^mount_carmel/', 'preview.views.mount_carmel'),
-    url(r'^nationwide_childrens/', 'preview.views.nationwide_childrens'),
-    url(r'^ohio_health/', 'preview.views.ohio_health'),
+    url(r'^checkout/', include('checkout.urls')),
 
     # url(r'^ecomstore/', include('ecomstore.foo.urls')),
 

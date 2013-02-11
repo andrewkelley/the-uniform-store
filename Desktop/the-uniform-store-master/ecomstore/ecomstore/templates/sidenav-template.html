@@ -12,7 +12,6 @@
     <!-- Le styles -->
     <link href="/static/css/bootstrap.css" rel="stylesheet">
     <link href="/static/css/fancybox.css" rel="stylesheet">
-    <link href="/static/css/goTop.css" rel="stylesheet">
     
     <style type="text/css">
       body {
@@ -55,15 +54,15 @@
 			  <ul class="nav">
 				<li><a href="/">Home</a></li>
 				<li><a href="/">Store</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Customization <b class="caret"></b></a>
+				<li class="dropdown"><a href="/info/" class="dropdown-toggle" data-toggle="dropdown">Customization <b class="caret"></b></a>
 				  <ul class="dropdown-menu">
 					<li><a href="/Customization/Decoration/">Decoration</a></li>
-					<li><a href="/Customization/Artwork/">Artwork</a></li>
-					<li><a href="/Customization/Digitizing/">Digitizing</a></li>
+					<li><a href="/info/">Artwork</a></li>
+					<li><a href="/info/">Digitizing</a></li>
 				  </ul>
 				</li>
-				<li><a href="/Scopes-for-the-cure/">Scopes for the Cure</a></li>
-				<li><a href="/Contact-Us/">Contact Us</a></li>
+				<li><a href="/scopes_for_the_cure/">Scopes for the Cure</a></li>
+				<li><a href="/info/">Contact Us</a></li>
 			  </ul>
 			  <ul class="nav pull-right">
 				<li><a href="/cart"><i class="icon-shopping-cart"></i> My Cart</a></li>
@@ -76,7 +75,19 @@
 		</div>
 	  </div>
 		
-	  {% block content %} {% endblock %}
+	<!-- {% block content %} {% endblock %} -->
+	  <div class="container">
+	    <div class="row">
+	      <div class="span3">
+	        <ul class="nav nav-list affix-top">
+	      	
+	      	</ul>
+	      </div>
+	      <div class="span9">
+	      </div>
+	    </div>
+	  </div>
+
       <footer>
 		<div class="row">                   
 		  <div class="span3">
@@ -109,9 +120,6 @@
               <a href="#"><img style="max-height: 14px;" src="/static/img/glyphicons/twitter.png"/> Twitter</a>
 		  </div>				
 		</div>
-		<div style="text-align:center;">
-	      <div id="go-top" class="btn btn-mini" style="display: block-inline;">Go to Top</div>
-	    </div>
       </footer>
       
     </div> <!-- /container -->
@@ -120,36 +128,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script src="/static/js/goTop.js"></script>
     <script src="/static/js/bootstrap.js"></script>
     <script src="/static/js/fancybox.js"></script>
-    <script src="/static/js/jquery.masonry.min.js"></script> 
-    <script>
-    	var easing, e, pos;
-			$(function(){
-			  // Get the click event
-			  $("#go-top").on("click", function(){
-				// Get the scroll pos
-				pos= $(window).scrollTop();
-				// Set the body top margin
-				$("body").css({
-				  "margin-top": -pos+"px",
-				  "overflow-y": "scroll", // This property is posed for fix the blink of the window width change 
-				});
-				// Make the scroll handle on the position 0
-				$(window).scrollTop(0);
-				// Add the transition property to the body element
-				$("body").css("transition", "all 1s ease");
-				// Apply the scroll effects
-				$("body").css("margin-top", "0");
-				// Wait until the transition end
-				$("body").on("webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd", function(){
-				  // Remove the transition property
-				  $("body").css("transition", "none");
-				});
-			  });
-			}); 
-	</script>
+    <script src="/static/js/jquery.masonry.min.js"></script>  
     <script>
     	var $container = $('.thumbnails');
     	
@@ -183,22 +164,6 @@
   			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	
-	<!-- Google Analytics -->
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-38314059-1']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-    </script>
-	
     <!--<script src="static/js/bootstrap-transition.js"></script>
     <script src="static/js/bootstrap-alert.js"></script>
     <script src="static/js/bootstrap-modal.js"></script>

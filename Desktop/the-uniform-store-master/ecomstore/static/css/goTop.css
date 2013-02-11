@@ -1,0 +1,141 @@
+
+/* ================================
+   Base
+   ================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a {
+  color: #00AADD;
+  text-decoration: none;
+}
+
+body {
+  background: url(img/debut_light.png) repeat 0 0 scroll;
+}
+
+/* ================================
+   Typography
+   ================================ */
+
+.go-back {
+  background-color: #4099FF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #fff;
+  padding: 3px 12px;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+.main-title {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  padding: 30px 0;
+  text-shadow: 0 1px 0 #fff;
+  color: #919191;
+  text-align: center;
+}
+
+.description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-shadow: 0 1px 0 #fff;
+  text-align: center;
+  padding: 0 70px;
+  color: #7B7B7B;
+}
+
+.go-down,
+.down-arrow {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-shadow: 0 1px 0 #fff;
+  text-align: center;
+  padding: 0 70px;
+  color: #7B7B7B;
+  padding: 40px;
+  padding-top: 60px;
+  color: #4099FF;
+}
+
+.down-arrow {
+  font-size: 108px;
+  color: #919191;
+}
+
+/* ================================
+   Navigation
+   ================================ */
+
+nav {
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  padding: 0 40px;
+}
+
+nav > div:first-child {
+  float: right;
+}
+
+nav > div:last-child {
+  float: left;
+}
+
+nav > div iframe {
+  padding-top: 10px;
+  vertical-align: top;
+}
+
+nav > div:first-child iframe {
+  margin-right: 10px;
+}
+
+.go-top-sets {
+  padding: 60px 0;
+  margin-bottom: 100px;
+}
+
+.go-top-sets > ul {
+  display: block;
+  margin: 0 auto;
+  width: 576px;
+}
+
+.go-top-sets > ul > li {
+  background-color: #1E90FF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 26px;
+  font-weight: 700;
+  width: 130px;
+  display: block;
+  float: left;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.go-top-sets > ul > li.easing-2 {
+  background-color: #EF4423;
+}
+
+.go-top-sets > ul > li.easing-3 {
+  background-color: #6B8E23;
+}

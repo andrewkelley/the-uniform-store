@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% load catalog_filters %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<div class="accordion" id="accordion2">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+							<p><strong>Step 1: Checkout Options</strong></p>
+						</a>
+					</div>
+					<div id="collapseOne" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							<p>Customer login here</p>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+							<p><strong>Step 2: Billing Details</strong></p>
+						</a>
+					</div>
+					<div id="collapseTwo" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							<form class="form-horizontal">
+								<div class="control-group">
+									<label class="control-label" for="inputAddress1">Address</label>
+									<div class="controls">
+								  		<input type="text" id="inputAddress1" placeholder="Address">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputAddress2">Address Cont.</label>
+									<div class="controls">
+								  		<input type="text" id="inputAddress2" placeholder="Address Cont.">
+									</div>
+								</div>
+							  	<div class="control-group">
+									<label class="control-label" for="inputCity">City</label>
+									<div class="controls">
+								  		<input type="password" id="inputCity" placeholder="City">
+									</div>
+							  	</div>
+							  	<div class="control-group">
+									<label class="control-label" for="inputState">State</label>
+									<div class="controls">
+								  		<input type="password" id="inputState" placeholder="State">
+									</div>
+							  	</div>
+							  	<div class="control-group">
+									<div class="controls">
+								  		<label class="checkbox">
+											<input type="checkbox"> Same as Shipping Address?
+								  		</label>
+								  		<button type="submit" class="btn">Submit</button>
+									</div>
+							  	</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+							<p><strong>Step 3: Shipping Details</strong></p>
+						</a>
+					</div>
+					<div id="collapseThree" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							<form class="form-horizontal">
+								<div class="control-group">
+									<label class="control-label" for="inputAddress1Ship">Address</label>
+									<div class="controls">
+								  		<input type="text" id="inputAddress1Ship" placeholder="Address">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputAddress2Ship">Address Cont.</label>
+									<div class="controls">
+								  		<input type="text" id="inputAddress2Ship" placeholder="Address Cont.">
+									</div>
+								</div>
+							  	<div class="control-group">
+									<label class="control-label" for="inputCityShip">City</label>
+									<div class="controls">
+								  		<input type="password" id="inputCityShip" placeholder="City">
+									</div>
+							  	</div>
+							  	<div class="control-group">
+									<label class="control-label" for="inputStateShip">State</label>
+									<div class="controls">
+								  		<input type="password" id="inputStateShip" placeholder="State">
+									</div>
+							  	</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+							<p><strong>Step 4: Payment Method</strong></p>
+						</a>
+					</div>
+					<div id="collapseFour" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							<p>Stripe payment</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span5">
+		</div>
+		<div class="span2">
+		</div>
+		<div class="span5">
+			<button class="btn btn-primary pull-right" type="submit" >Confirm Order</button>
+		</div>
+	</div>
+<hr>
+{% endblock %}
+
+

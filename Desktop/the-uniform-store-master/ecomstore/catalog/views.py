@@ -20,7 +20,7 @@ def show_product(request, product_slug, template_name="catalog/product.html"):
     page_title = p.name
     meta_keywords = p.meta_keywords
     meta_description = p.meta_description
-    if request.method == 'POST':
+    if request.method == 'POST':  
         postdata = request.POST.copy()
         form = ProductAddToCartForm(request, postdata)
         if form.is_valid():
