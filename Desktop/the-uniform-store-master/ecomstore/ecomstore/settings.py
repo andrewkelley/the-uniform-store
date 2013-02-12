@@ -13,6 +13,9 @@ ENABLE_SSL = False
 STRIPE_PUBLISHABLE = 'pk_test_jxxwWSFsUkW8oVBcTHxeGV9b'
 STRIPE_SECRET = 'sk_test_cFa3TOs21iCFrGQUt1MZI3ju'
 
+AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+LOGIN_REDIRECT_URL = '/accounts/my_account/'
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -140,6 +143,7 @@ INSTALLED_APPS = (
     'accounts',
     'utils',
     'cart',
+    'checkout',
 )
 
 # A sample logging configuration. The only tangible logging
